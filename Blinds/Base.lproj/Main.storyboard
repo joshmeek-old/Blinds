@@ -93,6 +93,7 @@
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="bigBlind" destination="a7F-zQ-SFF" id="VQ3-a3-3Ww"/>
+                        <outlet property="roundView" destination="0Rd-UI-2LZ" id="VWv-j2-niP"/>
                         <outlet property="smallBlind" destination="NA5-ub-3yJ" id="TOu-Jq-5c0"/>
                     </connections>
                 </viewController>

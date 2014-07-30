@@ -13,6 +13,7 @@
 		0374F4CA198897E200FD829C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0374F4C8198897E200FD829C /* Main.storyboard */; };
 		0374F4CC198897E200FD829C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0374F4CB198897E200FD829C /* Images.xcassets */; };
 		0374F4D8198897E200FD829C /* BlindsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374F4D7198897E200FD829C /* BlindsTests.swift */; };
+		0374F4E21988A67D00FD829C /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374F4E11988A67D00FD829C /* Handler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		0374F4D1198897E200FD829C /* BlindsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlindsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0374F4D6198897E200FD829C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0374F4D7198897E200FD829C /* BlindsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindsTests.swift; sourceTree = "<group>"; };
+		0374F4E11988A67D00FD829C /* Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				0374F4C2198897E200FD829C /* AppDelegate.swift */,
 				0374F4C4198897E200FD829C /* FirstViewController.swift */,
 				0374F4C6198897E200FD829C /* SecondViewController.swift */,
+				0374F4E11988A67D00FD829C /* Handler.swift */,
 				0374F4C8198897E200FD829C /* Main.storyboard */,
 				0374F4CB198897E200FD829C /* Images.xcassets */,
 				0374F4C0198897E200FD829C /* Supporting Files */,
@@ -213,6 +216,7 @@
 			files = (
 				0374F4C7198897E200FD829C /* SecondViewController.swift in Sources */,
 				0374F4C3198897E200FD829C /* AppDelegate.swift in Sources */,
+				0374F4E21988A67D00FD829C /* Handler.swift in Sources */,
 				0374F4C5198897E200FD829C /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

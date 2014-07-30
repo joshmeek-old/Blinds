@@ -12,6 +12,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet var bigBlind: UITextField!
     @IBOutlet var smallBlind: UITextField!
+    @IBOutlet var roundView: UITableView!
+    var handler: Handler = Handler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,20 +26,34 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func addRoundTapped() {
-        println("TAPPED!")
+        //println("TAPPED!")
+        self.view.endEditing(true)
+        handler.addRound(bigBlind.text, smallBlind: smallBlind.text)
+        bigBlind.text = ""
+        smallBlind.text = ""
+        roundView.reloadData()
+    }
+    
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
+    {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool
+    {
+        textField.resignFirstResponder();
+        return true
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return handler.numberOfRounds.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "")
-        cell.textLabel.text = "Yes"
-        cell.detailTextLabel.text = "No"
-        cell.editing = true
-        cell.setEditing(true, animated: true)
-        //cell
+        cell.textLabel.text = handler.numberOfRounds[indexPath.row].bigBlind
+        cell.detailTextLabel.text = handler.numberOfRounds[indexPath.row].smallBlind
+        
         return cell
     }
     
@@ -47,11 +63,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            
-            tableView.delete(indexPath)
-            
-            tableView.reloadData()
-            // handle delete (by removing the data from your array and updating the tableview)
+            handler.numberOfRounds.removeAtIndex(indexPath.row)
+            roundView.reloadData();
         }
     }
     
