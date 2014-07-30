@@ -13,7 +13,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var bigBlind: UITextField!
     @IBOutlet var smallBlind: UITextField!
     @IBOutlet var roundView: UITableView!
-    var handler: Handler = Handler()
+    var rounds: Rounds = Rounds()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +28,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func addRoundTapped() {
         //println("TAPPED!")
         self.view.endEditing(true)
-        handler.addRound(bigBlind.text, smallBlind: smallBlind.text)
-        bigBlind.text = ""
+        rounds.addRound(smallBlind.text, bigBlind: bigBlind.text)
         smallBlind.text = ""
+        bigBlind.text = ""
         roundView.reloadData()
     }
     
@@ -46,13 +46,15 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return handler.numberOfRounds.count
+        return rounds.roundsList.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "")
-        cell.textLabel.text = handler.numberOfRounds[indexPath.row].bigBlind
-        cell.detailTextLabel.text = handler.numberOfRounds[indexPath.row].smallBlind
+        cell.detailTextLabel.font = UIFont.systemFontOfSize(23.0)
+        cell.detailTextLabel.textColor = UIColor.blackColor()
+        cell.textLabel.text = rounds.roundsList[indexPath.row].smallBlind
+        cell.detailTextLabel.text = rounds.roundsList[indexPath.row].bigBlind
         
         return cell
     }
@@ -63,7 +65,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            handler.numberOfRounds.removeAtIndex(indexPath.row)
+            rounds.roundsList.removeAtIndex(indexPath.row)
             roundView.reloadData();
         }
     }
