@@ -20,7 +20,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Details" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Details" image="document.png" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,7 +76,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Blinds" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Blinds" image="storage.png" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="bigBlind" destination="NA5-ub-3yJ" id="8rL-xr-ccU"/>
                         <outlet property="roundView" destination="0Rd-UI-2LZ" id="VWv-j2-niP"/>
@@ -108,8 +108,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="document.png" width="30" height="30"/>
+        <image name="storage.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
