@@ -85,6 +85,7 @@
 				0374F4E11988A67D00FD829C /* Rounds.swift */,
 				0374F4C8198897E200FD829C /* Main.storyboard */,
 				0374F4CB198897E200FD829C /* Images.xcassets */,
+				0374F4E31989442A00FD829C /* Images */,
 				0374F4C0198897E200FD829C /* Supporting Files */,
 			);
 			path = Blinds;
@@ -113,6 +114,13 @@
 				0374F4D6198897E200FD829C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0374F4E31989442A00FD829C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
