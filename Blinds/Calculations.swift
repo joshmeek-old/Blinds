@@ -49,79 +49,62 @@ class Calculations {
             }
         }
 
+        totalHands = 0
+        
         amountOfPlayers = _amountOfPlayers
         chips = Float(_chips)
         position = _position
         avgHands = _avgHands
-        
-        println(chips)
-        println(players)
-        println(position)
-        println(avgHands)
     }
     
     func calculate() {
-        //println
         while chips >= 0 {
             for var round = 0; round < rounds.roundsList.count; round++ {
                 for var hand = 1; hand <= avgHands; hand++ {
                     for var playerCount = 0; playerCount < amountOfPlayers; playerCount++ {
-                        println("Player \(playerCount)")
                         if players[playerCount].user == true {
                             if players[playerCount].bigBlind == true {
-                                println("\(playerCount) is user")
                                 chips = chips - (rounds.roundsList[round].bigBlind as NSString).floatValue
                             }
                             else if players[playerCount].smallBlind == true {
-                                println("\(playerCount) is user")
                                 chips = chips - (rounds.roundsList[round].smallBlind as NSString).floatValue
                             }
                         }
                         if players[playerCount].bigBlind == true {
-                            println("\(playerCount) is big blind")
                             players[playerCount].bigBlind = false
                             if playerCount == amountOfPlayers - 1 {
                                 players[0].bigBlind = true
-                                println("\(0) is now big blind")
                                 break;
                             }
                             else if playerCount == 0 {
                                 players[playerCount + 1].bigBlind = true
-                                println("\(playerCount + 1) is now big blind")
                                 playerCount = 2
                             }
                             else {
                                 players[playerCount + 1].bigBlind = true
-                                println("\(playerCount + 1) is now big blind")
                                 break;
                             }
                         }
                         else if players[playerCount].smallBlind == true {
-                            println("\(playerCount) is small blind")
                             players[playerCount].smallBlind = false
                             if playerCount == amountOfPlayers - 1 {
                                 players[0].smallBlind = true
-                                println("\(0) is now small blind")
                             }
                             else {
                                 players[playerCount + 1].smallBlind = true
-                                println("\(playerCount + 1) is now small blind")
                             }
                         }
                     }
-                    println("Hand \(hand)")
                     totalHands++
                     if chips <= 0 {
                         break
                     }
                 }
-                println("Round \(round)")
                 if chips <= 0 {
                     break
                 }
             }
         }
-    println(totalHands)
     }
     
 }

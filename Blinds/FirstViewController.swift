@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
     @IBOutlet var playersField: UITextField!
     @IBOutlet var positionField: UITextField!
     @IBOutlet var avgRoundsField: UITextField!
+    @IBOutlet var totalHandsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class FirstViewController: UIViewController {
         var avgHands = Int((avgRoundsField.text as NSString).intValue)
         calculations.addInfo(chips, _amountOfPlayers: numPlayers, _position: position, _avgHands: avgHands)
         calculations.calculate()
+        totalHandsLabel.text = String("Hands: ~\(calculations.totalHands)")
     }
     
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
