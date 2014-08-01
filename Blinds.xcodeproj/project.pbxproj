@@ -16,6 +16,7 @@
 		0374F4E21988A67D00FD829C /* Rounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374F4E11988A67D00FD829C /* Rounds.swift */; };
 		0374F4E5198944BD00FD829C /* document.png in Resources */ = {isa = PBXBuildFile; fileRef = 0374F4E4198944BD00FD829C /* document.png */; };
 		0374F4E7198944FF00FD829C /* storage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0374F4E6198944FF00FD829C /* storage.png */; };
+		0374F4E9198B302800FD829C /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374F4E8198B302800FD829C /* Calculations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		0374F4E11988A67D00FD829C /* Rounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rounds.swift; sourceTree = "<group>"; };
 		0374F4E4198944BD00FD829C /* document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = document.png; path = "../../../../Downloads/iconbeast-lite/iconbeast lite - png/document.png"; sourceTree = "<group>"; };
 		0374F4E6198944FF00FD829C /* storage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = storage.png; path = "../../../../Downloads/iconbeast-lite/iconbeast lite - png/storage.png"; sourceTree = "<group>"; };
+		0374F4E8198B302800FD829C /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				0374F4C4198897E200FD829C /* FirstViewController.swift */,
 				0374F4C6198897E200FD829C /* SecondViewController.swift */,
 				0374F4E11988A67D00FD829C /* Rounds.swift */,
+				0374F4E8198B302800FD829C /* Calculations.swift */,
 				0374F4C8198897E200FD829C /* Main.storyboard */,
 				0374F4CB198897E200FD829C /* Images.xcassets */,
 				0374F4E31989442A00FD829C /* Images */,
@@ -233,6 +236,7 @@
 				0374F4C7198897E200FD829C /* SecondViewController.swift in Sources */,
 				0374F4C3198897E200FD829C /* AppDelegate.swift in Sources */,
 				0374F4E21988A67D00FD829C /* Rounds.swift in Sources */,
+				0374F4E9198B302800FD829C /* Calculations.swift in Sources */,
 				0374F4C5198897E200FD829C /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

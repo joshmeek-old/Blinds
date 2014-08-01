@@ -34,13 +34,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         roundView.reloadData()
     }
     
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
-    {
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool
-    {
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
         textField.resignFirstResponder();
         return true
     }
