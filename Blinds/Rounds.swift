@@ -16,9 +16,15 @@ struct round {
 class Rounds: NSObject {
     
     var roundsList = [round]()
+    var numRounds = 0
     
     func addRound(smallBlind: String, bigBlind: String) {
         roundsList.append(round(smallBlind: smallBlind, bigBlind: bigBlind))
+        numRounds++
     }
     
+    func numberOfRounds() -> Int {
+        println(numRounds)
+        return numRounds
+    }
 }

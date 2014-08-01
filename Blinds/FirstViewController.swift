@@ -28,6 +28,7 @@ class FirstViewController: UIViewController {
 
     @IBAction func calculateTapped() {
         calculations.addInfo(4000, amountOfPlayers: 9, _position: 4, _avgHands: 9)
+        calculations.calculate()
     }
     
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {

@@ -20,6 +20,7 @@ class Calculations: NSObject {
     var players = [player]()
     var position: Int = 0
     var avgHands: Int = 0
+    var rounds: Rounds = Rounds()
     
     func addInfo(_chips: Int, amountOfPlayers: Int, _position: Int, _avgHands: Int) {
         for index in 1...amountOfPlayers {
@@ -45,6 +46,15 @@ class Calculations: NSObject {
         println(players)
         println(position)
         println(avgHands)
+    }
+    
+    func calculate() {
+        println(rounds.roundsList[0].bigBlind)
+        /*while chips >= 0 {
+            for var round = 0; round <= rounds.roundsList.count; round++ {
+                println(round)
+            }
+        }*/
     }
     
 }
