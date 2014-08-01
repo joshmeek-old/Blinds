@@ -8,21 +8,43 @@
 
 import UIKit
 
+struct player {
+    var user = false
+    var bigBlind = false
+    var smallBlind = false
+}
+
 class Calculations: NSObject {
    
-    var players = [Int]()
+    var chips: Int = 0;
+    var players = [player]()
     var position: Int = 0
+    var avgHands: Int = 0
     
-    func addPlayers(amountOfPlayers: Int) {
+    func addInfo(_chips: Int, amountOfPlayers: Int, _position: Int, _avgHands: Int) {
         for index in 1...amountOfPlayers {
-            players.append(index)
+            if index == position {
+                players.append(player(user: true, bigBlind: false, smallBlind: false))
+            }
+            else if index == 2 {
+                players.append(player(user: false, bigBlind: false, smallBlind: true))
+            }
+            else if index == 3 {
+                players.append(player(user: false, bigBlind: true, smallBlind: false))
+            }
+            else {
+                players.append(player(user: false, bigBlind: false, smallBlind: false))
+            }
         }
+
+        chips = _chips
+        position = _position
+        avgHands = _avgHands
         
+        println(chips)
         println(players)
+        println(position)
+        println(avgHands)
     }
     
-    func addPosition(_position: Int) {
-        position = _position
-        println(position)
-    }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
+    @IBOutlet var chipsField: UITextField!
     @IBOutlet var playersField: UITextField!
     @IBOutlet var positionField: UITextField!
     @IBOutlet var avgRoundsField: UITextField!
@@ -26,8 +27,7 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func calculateTapped() {
-        calculations.addPlayers(10)
-        calculations.addPosition(4)
+        calculations.addInfo(4000, amountOfPlayers: 9, _position: 4, _avgHands: 9)
     }
     
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
