@@ -11,8 +11,8 @@ import UIKit
 var rounds: Rounds = Rounds()
 
 struct round {
-    var smallBlind = ""
-    var bigBlind = ""
+    var smallBlind: String = ""
+    var bigBlind: String = ""
 }
 
 class Rounds: NSObject {

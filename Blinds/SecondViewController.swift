@@ -13,8 +13,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var bigBlind: UITextField!
     @IBOutlet var smallBlind: UITextField!
     @IBOutlet var roundView: UITableView!
-    //var rounds: Rounds = Rounds()
-    //var calculations: Calculations = Calculations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
