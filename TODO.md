@@ -1,5 +1,5 @@
 TODO
 ======
 
-1. Error handling
+1. Exception handling
 2. Polish the UI
