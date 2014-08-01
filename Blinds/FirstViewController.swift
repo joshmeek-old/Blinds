@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     @IBOutlet var playersField: UITextField!
     @IBOutlet var positionField: UITextField!
     @IBOutlet var avgRoundsField: UITextField!
-    var calculations: Calculations = Calculations()
+    //var calculations: Calculations = Calculations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,6 @@ class FirstViewController: UIViewController {
         textField.resignFirstResponder();
         return true
     }
-    
+
 }
 

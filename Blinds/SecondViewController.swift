@@ -13,7 +13,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var bigBlind: UITextField!
     @IBOutlet var smallBlind: UITextField!
     @IBOutlet var roundView: UITableView!
-    var rounds: Rounds = Rounds()
+    //var rounds: Rounds = Rounds()
+    //var calculations: Calculations = Calculations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +65,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             rounds.roundsList.removeAtIndex(indexPath.row)
-            roundView.reloadData();
+            roundView.reloadData()
         }
     }
     

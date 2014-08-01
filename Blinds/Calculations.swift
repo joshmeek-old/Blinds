@@ -8,19 +8,20 @@
 
 import UIKit
 
+var calculations: Calculations = Calculations()
+
 struct player {
     var user = false
     var bigBlind = false
     var smallBlind = false
 }
 
-class Calculations: NSObject {
+class Calculations {
    
     var chips: Int = 0;
     var players = [player]()
     var position: Int = 0
     var avgHands: Int = 0
-    var rounds: Rounds = Rounds()
     
     func addInfo(_chips: Int, amountOfPlayers: Int, _position: Int, _avgHands: Int) {
         for index in 1...amountOfPlayers {
@@ -42,10 +43,14 @@ class Calculations: NSObject {
         position = _position
         avgHands = _avgHands
         
-        println(chips)
+        /*println(chips)
         println(players)
         println(position)
-        println(avgHands)
+        println(avgHands)*/
+    }
+    
+    func updateRounds(_roundsList: [(round)]) {
+        //roundsList = _roundsList
     }
     
     func calculate() {

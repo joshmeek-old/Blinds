@@ -8,6 +8,8 @@
 
 import UIKit
 
+var rounds: Rounds = Rounds()
+
 struct round {
     var smallBlind = ""
     var bigBlind = ""
@@ -23,8 +25,4 @@ class Rounds: NSObject {
         numRounds++
     }
     
-    func numberOfRounds() -> Int {
-        println(numRounds)
-        return numRounds
-    }
 }
