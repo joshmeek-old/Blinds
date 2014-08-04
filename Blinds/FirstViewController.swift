@@ -33,7 +33,7 @@ class FirstViewController: UIViewController {
         var avgHands = Int((avgRoundsField.text as NSString).intValue)
         calculations.addInfo(chips, _amountOfPlayers: numPlayers, _position: position, _avgHands: avgHands)
         calculations.calculate()
-        totalHandsLabel.text = String("Hands: ~\(calculations.totalHands)")
+        totalHandsLabel.text = String(format: "Hands: ~\(calculations.totalHands)")
     }
     
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
